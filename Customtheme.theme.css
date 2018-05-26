@@ -2,8 +2,8 @@
 
 :root {
     --fullscreenimg: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-655823.png);
-    --verticalscreenimg: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-245887.jpg);
-    --fullscreenimg2: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-452025.jpg);
+    --verticalscreenimg: url(https://i.redd.it/m0rdxiha4si01.jpg);
+    --fullscreenimg2: url(https://i.imgur.com/u4z2Inj.png);
 	--Size: 50px;
     --Border-Size: 2px;
     --Border-Radius: 15%;
@@ -314,6 +314,14 @@ textarea
     }
     .theme-dark .members-1998pB {
     background-color: var(--transparencycolor);
+    }
+    .appMount-3VJmYg:hover
+    {
+        background-image: var(--fullscreenimg2);
+    }
+    .app:hover
+    {
+        background-image: var(--fullscreenimg2);
     }
 }
 .theme-dark .inner-zqa7da
