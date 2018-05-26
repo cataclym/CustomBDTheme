@@ -567,3 +567,14 @@ textarea
     border-left: solid 1px #86cecb;
     border-radius: 8px;
 }
+/* BLOCKED */
+.theme-dark .friends-table .messages .message-group-blocked .message-group-blocked-btn, .theme-dark .messages-wrapper .messages .message-group-blocked .message-group-blocked-btn {
+    background: #e12885;
+    color: black;
+    font: bold; 
+}
+.theme-dark .friends-table .messages .message-group-blocked .message-group-blocked-btn, .theme-dark .messages-wrapper .messages .message-group-blocked .message-group-blocked-btn:hover {
+    background: #373b3e;
+    color: #86cecb;
+    font: bold;
+}
