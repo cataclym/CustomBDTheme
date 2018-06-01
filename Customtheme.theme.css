@@ -7,6 +7,7 @@
 	--Size: 50px;
     --Border-Size: 2px;
     --Border-Radius: 5%;
+    --Border-Radius2: 5px;
     --Border-Colour: #86cecb;
     --Border-Style: solid;
 	--friendicon: url(https://media.discordapp.net/attachments/448860663863836682/448867574696902656/m18.png); /*Change this to whatever you like. Should be 50x50 or 100x100px*/
@@ -113,7 +114,7 @@ textarea
 {
     padding: 10px !important;
 
-    border-radius: var(--Border-Radius) !important;
+    border-radius: var(--Border-Radius2) !important;
     background: rgba(var(--transparencycolor),var(--messagetransparency));
 }
 .message-group.compact .comment
