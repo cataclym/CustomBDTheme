@@ -1,24 +1,37 @@
 //META{"name":"Miku theme","description":"A Miku themed skin for BBD","author":"@cataclym#1899","version":"0.11"}*//{}
 
 :root {
-    --fullscreenimg: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-655823.png);
-    --verticalscreenimg: url(https://i.redd.it/m0rdxiha4si01.jpg);
+    --fullscreenimg: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-514395.png);
+    --verticalscreenimg: url(https://i.imgur.com/UYkvHZi.jpg);
     --fullscreenimg2: url(https://i.imgur.com/u4z2Inj.png);
 	--Size: 50px;
     --Border-Size: 2px;
-    --Border-Radius: 15%;
+    --Border-Radius: 5%;
     --Border-Colour: #86cecb;
     --Border-Style: solid;
 	--friendicon: url(https://media.discordapp.net/attachments/448860663863836682/448867574696902656/m18.png); /*Change this to whatever you like. Should be 50x50 or 100x100px*/
     --transparencycolor: 0,0,0;		/* default: 0,0,0 */
 	--transparencyalpha: 0.4;		/* default: 0.15 */
     --messagetransparency: 0.5;
+    --color1: #e12885;
+    --color2: #86cecb;
+    --color3: #137a7f;
+    --color4: #bec8d1;
+    --color5: #373b3e;
+    
 }
 /* Edit this to change the color of your scrollbar,  */
 .theme-dark .friends-table .scroller-wrap ::-webkit-scrollbar-thumb,
 .theme-dark .messages-wrapper .scroller-wrap ::-webkit-scrollbar-thumb
 {
-    background-color: rgba(225,40,133, .9);
+    background-color: var(--color1);
+}
+.scroller-wrap .scroller::-webkit-scrollbar-thumb, .scroller-wrap .scroller::-webkit-scrollbar-track-piece {
+    border: 0px solid var(--color1);
+}
+.theme-dark .friends-table .scroller-wrap ::-webkit-scrollbar-track-piece, .theme-dark .messages-wrapper .scroller-wrap ::-webkit-scrollbar-track-piece {
+    background-color: var(--transparencyalpha) !important;
+    border-color: var(--transparencyalpha);
 }
 .theme-dark .layer,
 .theme-dark .layers
@@ -33,6 +46,11 @@
 {
     background: transparent !important;
 }
+/* optionally adjust background brightness (0: original image, 1: black) */
+.layers-3iHuyZ 
+{
+  background: rgba(0,0,0, 0.0) !important;
+}
 ::-webkit-input-placeholder,
 body,
 button,
@@ -40,14 +58,11 @@ input,
 select,
 textarea
 {
-    font-family: ubuntu;
-
-    color: white;
-    text-shadow: black 0 0 0;
+    text-shadow: 1px 1.5px black;
 }
 .channels-Ie2l6A
 {
-    border-right: solid 2px #e12885;
+    border-right: solid 2px var(--color1);
     background-color: rgba(0, 0, 0, .5) !important;
 }
 .container-PNkimc
@@ -73,6 +88,9 @@ textarea
     background-position: 50%;
     background-size: cover !important;
 }
+.nameDefaultText-24KCy5, .nameDefaultVoice-3WUH7s, .nameLockedText-3pqQcL, .nameLockedVoice-26MhB1 {
+    color: var(--color2);
+}
 .message-group
 {
     padding: 12px 0 10px 0 !important;
@@ -95,7 +113,7 @@ textarea
 {
     padding: 10px !important;
 
-    border-radius: 5px !important;
+    border-radius: var(--Border-Radius) !important;
     background: rgba(var(--transparencycolor),var(--messagetransparency));
 }
 .message-group.compact .comment
@@ -114,13 +132,13 @@ textarea
 .avatar-xsmall,
 .avatar-xxlarge
 {
-    border: solid 2px #e12885;
-    border-radius: 15% !important;
+    border: solid 2px var(--color1);
+    border-radius: var(--border-radius) !important;
     background-position: 50%;
 }
 .guilds-wrapper .guilds .guild .guild-inner
 {
-    border-radius: 15% !important;
+    border-radius: var(--Border-Radius) !important;
 }
 .guilds-wrapper .guilds .guild
 {
@@ -264,7 +282,7 @@ textarea
 }
 .theme-dark .title-3qD0b-
 {
-    background: transparent;
+    background: rgba(0,0,0,0.50)
 }
 .theme-dark .typing-2GQL18
 {
@@ -298,9 +316,7 @@ textarea
     {
         background-image: var(--fullscreenimg);
     }
-    .theme-dark .members-1998pB {
-    background-color: rgba(0,0,0,0.40);
-    }
+
 }
 @media (max-width:1560px)
 {
@@ -312,45 +328,35 @@ textarea
     {
         background-image: var(--verticalscreenimg);
     }
-    .theme-dark .members-1998pB {
-    background-color: var(--transparencycolor);
-    }
-    .appMount-3VJmYg:hover
-    {
-        background-image: var(--fullscreenimg2);
-    }
-    .app:hover
-    {
-        background-image: var(--fullscreenimg2);
-    }
 }
 .theme-dark .inner-zqa7da
 {
     background-color: rgba(0,0,0,.3);
 }
+.theme-dark .members-1998pB {
+    background-color: rgba(0,0,0,.5);
+}
 
 .theme-dark .textArea-2Spzkt
 {
-    color: #86cecb;
+    color: var(--color2);
 }
 .guilds-wrapper .guilds .guild.unread:before
 {
     height: 10px;
     margin-top: -6px;
 
-    border-radius: 5px;
-    background: #e12885;
+    border-radius: var(--Border-Radius);
+    background: var(--color1);
 }
 .guilds-wrapper .guilds .guild.selected:before
 {
     height: 40px;
     margin-top: -20px;
-
     -webkit-transition: height .25s ease-in-out,margin-top .25s ease-in-out;
-            transition: height .25s ease-in-out,margin-top .25s ease-in-out;
-
+    transition: height .25s ease-in-out,margin-top .25s ease-in-out;
     border-radius: 20px;
-    background: #e12885;
+    background: var(--color1);
 }
 .guilds-wrapper
 {
@@ -359,16 +365,12 @@ textarea
 .chat form
 {
     position: relative;
-
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-
     margin: 0 0 !important;
-
     -webkit-box-shadow: 0 -1px 0 rgba(0,0,0,.1);
-            box-shadow: 0 -1px 0 rgba(0,0,0,.1);
-
+    box-shadow: 0 -1px 0 rgba(0,0,0,.1);
     -ms-flex-negative: 0;
     flex-shrink: 0;
 }
@@ -379,16 +381,19 @@ textarea
 }
 .inner-btChU7 .rtc-connection-status-connected
 {
-    color: #e12885;
+    color: var(--color1);
 }
 .attachButtonPlay-ZnFdQr
 {
-    color: #e12885;
+    color: var(--color1);
+}
+.theme-dark .searchAnswer-3Dz2-q, .theme-dark .searchFilter-2ESiM3 {
+    background-color: var(--color5);
 }
 .theme-dark .message-group .comment .markup pre
 {
-    border-color: #e12885;
-    background: #373b3e;
+    border-color: var(--color1);
+    background: var(--color4);
 }
 .unread-1Dp-OI
 {
@@ -396,7 +401,7 @@ textarea
 }
 .contentSelectedText-3wUhMi
 {
-    background-color: #e12885;
+    background-color: var(--color1);
 }
 .theme-dark .private-channel-call
 {
@@ -406,6 +411,7 @@ textarea
 {
     background-color: rgba(0, 0, 0, .4);
 }
+
 /*------------ User popout ------------*/
 
 .userPopout-3XzG_A .header-2BwW8b
@@ -437,7 +443,7 @@ textarea
 
     transition: background-color .15s ease,border .15s ease !important;
 
-    color: #e12885 !important;
+    color: var(--color1) !important;
     border-width: 1px !important;
     border-style: solid !important;
     border-radius: 0 !important;
@@ -457,12 +463,12 @@ textarea
 
     width: 250px;
 
-    border: solid 1px #e12885;
+    border: solid 1px var(--color1);
     border-radius: 0;
 }
 .statusGreen-pvYWjA
 {
-    color: #e12885;
+    color: var(--color1);
 }
 
 /*--- roles ---*/
@@ -508,7 +514,7 @@ textarea
 .nameCollapsed-34uFWo,
 .nameDefault-2DI02H
 {
-    color: #e12885;
+    color: var(--color1);
 }
 .colorDefaultText-oas-QM,
 .colorDefaultVoice-3wYlhb,
@@ -532,13 +538,13 @@ textarea
 .theme-dark .messages-wrapper .messages .divider.divider-red > div
 {
     opacity: .8 !important;
-    background: #e12885 !important;
+    background: var(--color1) !important;
 }
 .theme-dark .messages-wrapper .messages .divider.divider-red > span
 {
     opacity: .8 !important;
-    color: #e12885 !important;
-    border: solid 1px #e12885;
+    color: var(--color1) !important;
+    border: solid 1px var(--color1);
     border-radius: 15px;
 }
 
@@ -546,43 +552,114 @@ textarea
 
 .topSectionSpotify-1lI0-P
 {
-    border-top: solid 1px #e12885;
-    border-right: solid 1px #e12885;
-    border-left: solid 1px #e12885;
-    border-radius: 8px;
-    background-color: #373b3e;
+    border-top: solid 2px var(--color2);
+    border-right: solid 2px var(--color2);
+    border-left: solid 2px var(--color2);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: var(--color5);
 }
 .topSectionPlaying-1J5E4n
 {
-    border-top: solid 1px #e12885;
-    border-right: solid 1px #e12885;
-    border-left: solid 1px #e12885;
-    border-radius: 8px;
-    background-color: #373b3e;
+    border-top: solid 2px var(--color2);
+    border-right: solid 2px var(--color2);
+    border-left: solid 2px var(--color2);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: var(--color5);
 }
 .theme-dark .body-3ND3kc
 {
-    border-right: solid 1px #e12885;
-    border-bottom: solid 1px #e12885;
-    border-left: solid 1px #e12885;
-    border-radius: 8px;
-    background-color: #373b3e;
+    border-right: solid 2px var(--color1);
+    border-bottom: solid 2px var(--color1);
+    border-left: solid 2px var(--color1);
+    border-top: solid 2px var(--color1);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: var(--color5);
 }
 .theme-dark .topSectionNormal-2-vo2m
 {
-    border-top: solid 1px #86cecb;
-    border-right: solid 1px #86cecb;
-    border-left: solid 1px #86cecb;
-    border-radius: 8px;
+    border-top: solid 2px var(--color2);
+    border-right: solid 2px var(--color2);
+    border-left: solid 2px var(--color2);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.theme-dark .connectedAccount-36nQx7, .theme-dark .userInfoSection-2acyCx+.userInfoSection-2acyCx {
+    border-color: var(--color1);
 }
 /* BLOCKED */
 .theme-dark .friends-table .messages .message-group-blocked .message-group-blocked-btn, .theme-dark .messages-wrapper .messages .message-group-blocked .message-group-blocked-btn {
-    background: #e12885;
+    background: var(--color1);
     color: black;
     font: bold; 
 }
 .theme-dark .friends-table .messages .message-group-blocked .message-group-blocked-btn, .theme-dark .messages-wrapper .messages .message-group-blocked .message-group-blocked-btn:hover {
-    background: #373b3e;
-    color: #86cecb;
+    background: var(--color5);
+    color: var(--color2);
     font: bold;
+}
+/*Pinned msg*/
+.theme-dark .messagesPopoutWrap-1MQ1bW {
+    -webkit-box-shadow: 2px 10px 0px 0px rgba(0,0,0,.20);
+    background-color: var(--color5);
+    border: 1px solid var(--color1);
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.0);
+}
+.theme-dark .messagesPopoutWrap-1MQ1bW .messagesPopout-24nkyi .message-group {
+    background-color: var(--color5);
+    border-color: rgba(28,36,43,0.0);
+}
+.theme-dark .messagesPopoutWrap-1MQ1bW .messagesPopout-24nkyi .message-group:hover {
+    border-color: var(--color2);
+}
+/*Search function*/
+.theme-dark .search-results-wrap {
+    background-color: rgba(0,0,0,.3);   
+}
+.theme-dark .search-results-wrap .search-result .search-result-message.hit {
+    
+    background-color: transparent !important;
+}
+.theme-dark .search-results-wrap .search-result:after {
+    background-image: -webkit-gradient(linear,left bottom,left top,from(rgba(47,49,54,0)),to(rgba(47,49,54,0.00)));
+    background-image: linear-gradient(0deg,rgba(47,49,54,0),rgba(47,49,54,0.00));
+}
+.theme-dark .search-results-wrap .search-result:before {
+    background-image: -webkit-gradient(linear,left bottom,left top,from(rgba(47,49,54,0)),to(rgba(47,49,54,0.00)));
+    background-image: linear-gradient(0deg,rgba(47,49,54,0),rgba(47,49,54,0.00));
+}
+.theme-dark .member-3W1lQa:hover .content-OzHfo4 {
+    background-color: var(--color3);
+    color: #fff;
+}
+.theme-dark .search-results-wrap .search-header {
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,20%);
+    background-color: rgba(47,49,54,0.00);
+    box-shadow: 0 1px 0 rgba(0,0,0,.2);
+}
+.theme-dark .search-results-wrap .channel-separator .channel-name {
+    background-color: hsla(0, 0%, 100%, 0);
+    color: #fff;
+}
+.theme-dark .search-results-wrap .search-result .search-result-message.after, .theme-dark .search-results-wrap .search-result .search-result-message.before {
+    opacity: 0.0;
+    display: none;
+}
+.theme-dark .search-results-wrap .search-result .search-result-message.hit {
+    border-top: 2px solid var(--color1);
+    border-bottom: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-radius: 0px;
+    
 }
