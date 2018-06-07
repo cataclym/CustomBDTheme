@@ -2,7 +2,7 @@
 
 :root {
     --fullscreenimg: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-514395.png);
-    --verticalscreenimg: url(https://i.imgur.com/UYkvHZi.jpg);
+    --verticalscreenimg: url(https://cdn.discordapp.com/attachments/419261562491109397/453594653300752404/winter_constellation_by_rimuu-dapo0ir.png);
     --fullscreenimg2: url(https://i.imgur.com/u4z2Inj.png);
 	--Size: 50px;
     --Border-Size: 2px;
@@ -19,7 +19,6 @@
     --color3: #137a7f;
     --color4: #bec8d1;
     --color5: #373b3e;
-    
 }
 /* Edit this to change the color of your scrollbar,  */
 .theme-dark .friends-table .scroller-wrap ::-webkit-scrollbar-thumb,
@@ -81,7 +80,6 @@ textarea
 {
     width: var(--Size)!important;
     height: var(--Size)!important;
-
     border: var(--Border-Size) var(--Border-Style) var(--Border-Colour) !important;
     border-radius: var(--Border-Radius) !important;
     background-image: var(--friendicon);
@@ -95,7 +93,6 @@ textarea
 .message-group
 {
     padding: 12px 0 10px 0 !important;
-
     border-radius: 5px !important;
 }
 .message-group.compact
@@ -113,7 +110,6 @@ textarea
 .message-group .comment
 {
     padding: 10px !important;
-
     border-radius: var(--Border-Radius2) !important;
     background: rgba(var(--transparencycolor),var(--messagetransparency));
 }
@@ -125,7 +121,6 @@ textarea
 {
     padding: .6px 5px !important;
 }
-
 .avatar-large,
 .avatar-profile,
 .avatar-small,
@@ -145,12 +140,10 @@ textarea
 {
     width: 85%;
 }
-
 .chat .avatar-large
 {
     width: var(--Size)!important;
     height: var(--Size)!important;
-
     border: var(--Border-Size) var(--Border-Style) var(--Border-Colour) !important;
     border-radius: var(--Border-Radius) !important;
     background-size: cover !important;
@@ -160,7 +153,6 @@ textarea
     0%
     {
         transform: translateX(-50px);
-
         opacity: 0;
     }
     100%
@@ -346,8 +338,7 @@ textarea
 {
     height: 10px;
     margin-top: -6px;
-
-    border-radius: var(--Border-Radius);
+    border-radius: var(--Border-Radius2);
     background: var(--color1);
 }
 .guilds-wrapper .guilds .guild.selected:before
@@ -643,6 +634,10 @@ textarea
     background-color: var(--color3);
     color: #fff;
 }
+.theme-dark .member-3W1lQa.popout-open .content-OzHfo4, .theme-dark .member-3W1lQa.popout-open:hover .content-OzHfo4 {
+    background-color: var(--color1);
+    color: #fff;
+}
 .theme-dark .search-results-wrap .search-header {
     -webkit-box-shadow: 0 1px 0 rgba(0,0,0,20%);
     background-color: rgba(47,49,54,0.00);
@@ -661,6 +656,5 @@ textarea
     border-bottom: 0px;
     border-right: 0px;
     border-left: 0px;
-    border-radius: 0px;
-    
+    border-radius: 0px;   
 }
